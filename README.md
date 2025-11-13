@@ -20,51 +20,11 @@
 ### Initialisation
 <br>
 
-Comment initialiser ce genre de projet ? <br>
-Utilisation de **`UniTask`**: <br>
---> Guide d'installation ([**Lien UniTask OpenUPM**](https://openupm.com/packages/com.cysharp.unitask/#modal-manualinstallation)) <br>
+ Installer `UniTask`: <br>
+Guide d'installation d'UniTask ([**Lien UniTask OpenUPM**](https://openupm.com/packages/com.cysharp.unitask/#modal-manualinstallation)) <br>
 <br>
-**1ère Etape** <br>
-Sur Unity, dans un projet 3D: <br>
---> Onglet >Edit <br>
---> Project Setting <br>
---> Package Manager <br>
-<br>
-|---- Name  : `package.openupm.com` <br>
-|---- URL   : `https://package/openupm.com` <br>
-|---- Scope : `com.cysharp.unitask` <br>
-<br>
-<img width="50%" src="Prj4_Jours1/Documentation/SetupUniTask_Unity_FullOnglet.png"></img> <br>
-<br>
- **2ème Etapes** <br>
- Une fois validé, on peut fermer la fenêtre puis: <br>
- --> Onglet: Window  <br>
- --> Package Manager <br>
- --> [+] <br>
- --> Name: `com.cysharp.unitask` | version: `2.5.10` <br>
-<br>
- <img width="25%" src="Prj4_Jours1/Documentation/Unity_Package_Plus_Name.png"></img> <br>
-<img width="25%" src="Prj4_Jours1/Documentation/Unity_Package_Plus_Name_InputField.png"></img> <br>
-<br>
-**3ème Etapes:** (Facultatif, seulement si tu souhaite recommencer avec une base basique) <br>
-Une fois UniTask correctement installé, on peut télécharger le package découverte de l'intervenant. <br>  
-[**LienDriveCampus**](https://drive.google.com/drive/folders/1QxmWzBSGsTq-miRODwUX_zA8UEcFaUDW) <br>
+Apres avoir installé UniTask, récup le package donné en cours : [**LienDriveCampus**](https://drive.google.com/drive/folders/1QxmWzBSGsTq-miRODwUX_zA8UEcFaUDW) <br>
 Nom du package: `ArchitectureProceduralGeneration.unitypackage` <br>
-Une fois téléchargé, simplement glisser le package dans la Hierarchy Unity, puis import le tout. <br>
-<br>
-
-- - - - -
-
-**FIN INITIALISATION**
-<br>
-Ici, le projet contient plus d'élément que le simple package de l'étape 3. <br>
-On retrouve les exemples de: <br>
-- SimpleRoomPlacement <br>
-- BSP <br>
-- Cellular Automata <br>
-- Noise <br>
-
-<br>
 
 - - - - -
 ## SimpleRoomPlacement
