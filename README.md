@@ -117,4 +117,12 @@ incoveniants : compliquer a faire et compliquer a bien regler <br>
 ## Noise
 <br>
 
-Sur Unity, utilise la scène `GridGenerator`. vérifie que GenerationMethod utilise le scriptableObject `Noise` sur le GameObject `ProceduralGridGenerator`
+Sur Unity, utilise la scène `GridGenerator`. vérifie que GenerationMethod utilise le scriptableObject `Noises` sur le GameObject `ProceduralGridGenerator`
+
+Utilisation de bruit pour gerer les variation d'altitude <br>
+Genere un NoiseMap 2d avec qur des valeurs entre -1 et 1 <br>
+Passe par des parametre modifiable : <br>
+1. La frequency : est globalement un "Zoom" sur le bruit, plus la valeur est basse, plus il y aura de vatiations (car + zoomer en gros)<br>
+2. Les octaves : c'est des couche de bruit superposé , plus on met d'octaves ( donc de couches) plus c'est detailé, alors que 1 seul octave sera un terrain vague avcec des grandes collines douce<br>
+3. Lacunarity/Persistance : la lacunarité c'est un peu la difference de "taille" entres les details, en gros c'est la difference de taille entre les couches (si on prend des pinceaux en expemple 3 octaves = trois pinceau de plus en plus gros, la lacunarity sera la difference de taille entre ces pinceaux) <br>
+La persistance est l'"impact" qu'aura chaque couche (sera il tres visible ou moins visible )<br>
