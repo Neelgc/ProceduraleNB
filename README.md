@@ -74,76 +74,47 @@ Sur Unity, utilise la scène `GridGenerator`. vérifie que GenerationMethod util
 
 Explication du script `Simple Room Placement.cs` <br>
 
-Le scrip `SimplRoomPlacement place aléatoirement` place des room aléatoirement
-Essaie de placer le nombre max de salles selon la valeur de _maxRooms (changable dans l'inspector)
-Chaque room a une taille random comprise entre minimum 3x3 et maximum 7x7 (changable dans l'inspector)
-Place la room avce une taille aléatoire
-Verifie qu'il n'y a pas de collision avec lse autres room (ce qui force un ecart d'au moins 1)
-Si la room ne peux pas etre placer, l'algo ressaye avec une autre room
-Cette methode a pour avantage d'etre simple prévisible et rapide mais a pour incoveniant de laisser bcp d'espace vide ( et pas de connection entre les room)
-
+Le scrip `SimplRoomPlacement place aléatoirement` place des room aléatoirement <br>
+Essaie de placer le nombre max de salles selon la valeur de _maxRooms (changable dans l'inspector) <br>
+Chaque room a une taille random comprise entre minimum 3x3 et maximum 7x7 (changable dans l'inspector) <br>
+Place la room avce une taille aléatoire <br>
+Verifie qu'il n'y a pas de collision avec lse autres room (ce qui force un ecart d'au moins 1) <br>
+Si la room ne peux pas etre placer, l'algo ressaye avec une autre room <br>
+Cette methode a pour avantage d'etre simple prévisible et rapide mais a pour incoveniant de laisser bcp d'espace vide ( et pas de connection entre les room) <br>
 - - - - -
 ## BSP
 <br>
 
-Partie explication BSP
+Sur Unity, utilise la scène `GridGenerator`. vérifie que GenerationMethod utilise le scriptableObject `BSP` sur le GameObject `ProceduralGridGenerator`
 
+Explication du script `BSP.cs` <br>
 
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
+Le `BSP`(BinarySpacePartitioning) effectue des divisions recursives pour tranformé une zone en zones de + en + petites <br>
+La zone de départ esr l'entierté de la grid <br>
+Divise la zone en 2 avec un ratio random <br>
+Répete cet operation pour chaque sous zone cree etc ( bien mettree une condition d'arret sinn ca s'arrete jamais) <br>
+Arrete de diviser quand une zone est trop petite pour etre diviser, ca deviens une Leaf <br>
+Place ensuite les room dans chaque Leaf (room de taille random toujours) <br>
+Relie ensuite les room avec les Corridor (censé partir du centre des room et ne pas se 'croisé') <br>
+Cette methode a pour avantage d'etre plus utilisable (le fait de relié les room peux deja cree des sortes de donjon), ca rend aussi le placement aleatoire moins chaotique je trouve, ce qui est aussi l'incoveniant, ca devien facilement trop regulier selon les parametres ce qui donne un aspect non naturel <br>
 
-- - -
+- - - - -
 ## CellularAutomata
 <br>
 
-Partie explication Cellular Automata
+Sur Unity, utilise la scène `GridGenerator`. vérifie que GenerationMethod utilise le scriptableObject `CellularAutomata` sur le GameObject `ProceduralGridGenerator`
 
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
+Le `CellularAutomata` est une simulation de vie organiuqe , comme le "jeu de la vie" (cf video ego) <br>
+Place de facon random les tiles (Grass et Water dans mon cas) selon la _noiseDensity (modifiable dans l'inspector) <br>
+Compte ensuite les 8 voisin de chaque tiles : <br>
+Pour une tiles Grass : reste grass si au moins 4 voisin sont grass <br>
+pour une tiles Water : devien grass si au moins 5 voisin sont grass <br>
+puis rebelote pendant X steps (la valeur de _maxSteps) <br>
+avantgae : donne des maps naturel et organique <br>
+incoveniants : compliquer a faire et compliquer a bien regler <br>
 
-- - -
+- - - - -
 ## Noise
 <br>
 
-Partie explication Noise
-
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
-1.
+Sur Unity, utilise la scène `GridGenerator`. vérifie que GenerationMethod utilise le scriptableObject `Noise` sur le GameObject `ProceduralGridGenerator`
