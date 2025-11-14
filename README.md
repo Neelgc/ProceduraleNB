@@ -1,9 +1,9 @@
 
 **BESSON NEEL**
-> Gaming Campus <br>
-> GTech3 2025
-> Groupe GameBoy <br>
-> Semaine `JEU PROCEDURAL UNITY` <br>
+Gaming Campus <br>
+GTech3 2025
+Groupe GameBoy <br>
+Semaine `JEU PROCEDURAL UNITY` <br>
 
 
 ### Sommaires
